@@ -6,4 +6,4 @@ before_install:
     - docker build -t dpartap/react-app -f Dockerfile.dev .
 
 script:
-    - docker run dpartap/react-app npm run test -- --coverage
+    - docker run -e CI=true dpartap/react-app npm run test
